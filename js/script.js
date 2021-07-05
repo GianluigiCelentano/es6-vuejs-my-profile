@@ -61,24 +61,21 @@ data.myProfile.posts.forEach((post) => {
     postListHtml.innerHTML += `<div class="post"> ${postHtml} </div>`
 }) 
 
-let writing=""
 
-writing = addPost
+let newPost = document.querySelector(".addPost")
 
-let addPost = document.querySelector(".addPost")
-
-addPost += `
-<div class="post-details"> 
-    <div class="user-pic">
-        <img src="${data.myProfile.details.pic}" alt="user pic">
+postHtml = `
+    <div class="post-details"> 
+        <div class="user-pic">
+            <img src="${data.myProfile.details.pic}" alt="user pic">
+        </div>
+        <div class="details">
+            <div class="user-name">${data.myProfile.details.name} ${data.myProfile.details.surname}</div>
+            <div class="post-date">"05/07/2021"</div>
+        </div>
+    </div> 
+    <div class="post-text">
+        ${newPost}
     </div>
-    <div class="details">
-        <div class="user-name">${data.myProfile.details.name} ${data.myProfile.details.surname}</div>
-        <div class="post-date">${post.date}</div>
-    </div>
-</div> 
-<div class="post-text">
-    ${newPost}
-</div>
 ` 
 
