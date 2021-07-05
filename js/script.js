@@ -64,18 +64,21 @@ data.myProfile.posts.forEach((post) => {
 
 let newPost = document.querySelector(".addPost")
 
-postHtml = `
-    <div class="post-details"> 
-        <div class="user-pic">
-            <img src="${data.myProfile.details.pic}" alt="user pic">
-        </div>
-        <div class="details">
-            <div class="user-name">${data.myProfile.details.name} ${data.myProfile.details.surname}</div>
-            <div class="post-date">"05/07/2021"</div>
-        </div>
-    </div> 
-    <div class="post-text">
-        ${newPost}
+function addPost() {
+ postHtml += `
+<div class="post-details"> 
+    <div class="user-pic">
+        <img src="${data.myProfile.details.pic}" alt="user pic">
     </div>
+    <div class="details">
+        <div class="user-name">${data.myProfile.details.name} ${data.myProfile.details.surname}</div>
+        <div class="post-date">"05/07/2021"</div>
+    </div>
+</div> 
+<div class="post-text">
+    ${newPost}
+</div>
 ` 
+}
+
 
