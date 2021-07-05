@@ -34,7 +34,7 @@ new Vue(
         },
         methods: {
             addPost: function () {
-                this.myProfile.posts.push({
+                this.myProfile.posts.unshift({
                     text: this.currentPost,
                     date: '05-07-2021'
                 })
